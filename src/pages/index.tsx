@@ -19,7 +19,7 @@ export default function SignIn(): JSX.Element {
     resolver: yupResolver(signInFormSchema),
   });
 
-  const { errors } = formState;
+  const { errors, isSubmitting } = formState;
 
   const handleSingIn: SubmitHandler<SignInFormData> = async values => {
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -57,13 +57,7 @@ export default function SignIn(): JSX.Element {
           />
         </Stack>
 
-        <Button
-          type="submit"
-          mt="6"
-          colorScheme="pink"
-          size="lg"
-          isLoading={formState.isSubmitting}
-        >
+        <Button type="submit" mt="6" colorScheme="pink" size="lg" isLoading={isSubmitting}>
           Entrar
         </Button>
       </Flex>
