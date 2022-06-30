@@ -69,13 +69,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -97,13 +97,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -125,13 +125,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -153,13 +153,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -181,13 +181,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -209,13 +209,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -237,13 +237,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -265,13 +265,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
@@ -293,13 +293,13 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">Marcos Pererira</Text>
+                    <Text fontWeight="bold">Marcos Pereira</Text>
                     <Text fontSize="sm" color="gray.300">
                       vinicius.hein@gmail.com
                     </Text>
                   </Box>
                 </Td>
-                {isWideVersion && <Td>21 de Outrubro, 2021</Td>}
+                {isWideVersion && <Td>21 de Outubro, 2021</Td>}
                 <Td>
                   {isWideVersion && (
                     <Button
