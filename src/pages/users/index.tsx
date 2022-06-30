@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import Link from "next/link";
+import { useEffect } from "react";
 import { Header } from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
@@ -25,6 +26,12 @@ export default function UserList(): JSX.Element {
     base: false,
     md: true,
   });
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/users")
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }, []);
 
   return (
     <Box>
