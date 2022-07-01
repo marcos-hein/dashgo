@@ -17,35 +17,13 @@ import {
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import Link from "next/link";
-import { useQuery } from "react-query";
 import { Header } from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
-import { api } from "../../services/api";
+import { useUsers } from "../../services/hooks/useUsers";
 
 export default function UserList(): JSX.Element {
-  const { data, isLoading, isFetching, error } = useQuery(
-    "users",
-    async () => {
-      const { data: responseData } = await api.get("users");
-
-      const users = responseData.users.map(user => {
-        return {
-          ...user,
-          createdAt: new Date(user.createdAt).toLocaleDateString("pt-BR", {
-            day: "2-digit",
-            month: "long",
-            year: "numeric",
-          }),
-        };
-      });
-
-      return users;
-    },
-    {
-      staleTime: 1000 * 5, // 5 seconds
-    },
-  );
+  const { data, isLoading, isFetching, error } = useUsers();
 
   const isWideVersion = useBreakpointValue({
     base: false,
