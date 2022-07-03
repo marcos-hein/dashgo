@@ -14,14 +14,17 @@ import {
   Text,
   useBreakpointValue,
   Spinner,
+  Link,
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useState } from "react";
 import { Header } from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
 import { useUsers } from "../../services/hooks/useUsers";
+import { queryClient } from "../../services/queryClient";
+import { api } from "../../services/api";
 
 export default function UserList(): JSX.Element {
   const [page, setPage] = useState(1);
@@ -31,6 +34,20 @@ export default function UserList(): JSX.Element {
     base: false,
     md: true,
   });
+
+  async function handlePrefetchUser(userId) {
+    await queryClient.prefetchInfiniteQuery(
+      ["user", userId],
+      async () => {
+        const response = await api.get(`users/${userId}`);
+
+        return response.data;
+      },
+      {
+        staleTime: 100 * 60 * 10, // 10 minutes
+      },
+    );
+  }
 
   function renderError(): JSX.Element {
     return (
@@ -66,7 +83,9 @@ export default function UserList(): JSX.Element {
                 </Td>
                 <Td>
                   <Box>
-                    <Text fontWeight="bold">{user.name}</Text>
+                    <Link color="purple.400" onMouseEnter={() => handlePrefetchUser(user.id)}>
+                      <Text fontWeight="bold">{user.name}</Text>
+                    </Link>
                     <Text fontSize="sm" color="gray.300">
                       {user.email}
                     </Text>
@@ -113,7 +132,7 @@ export default function UserList(): JSX.Element {
               Usuários
               {!isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4" />}
             </Heading>
-            <Link href="/users/create" passHref>
+            <NextLink href="/users/create" passHref>
               <Button
                 as="a"
                 size="sm"
@@ -123,7 +142,7 @@ export default function UserList(): JSX.Element {
               >
                 Criar novo
               </Button>
-            </Link>
+            </NextLink>
           </Flex>
 
           {error ? renderError() : renderContent()}
