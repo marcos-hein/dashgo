@@ -19,16 +19,19 @@ import {
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import NextLink from "next/link";
 import { useState } from "react";
+import { GetServerSideProps } from "next";
 import { Header } from "../../components/Header";
 import Pagination from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
-import { useUsers } from "../../services/hooks/useUsers";
+import { getUsers, useUsers } from "../../services/hooks/useUsers";
 import { queryClient } from "../../services/queryClient";
 import { api } from "../../services/api";
 
-export default function UserList(): JSX.Element {
+export default function UserList({ users }): JSX.Element {
   const [page, setPage] = useState(1);
-  const { data, isLoading, isFetching, error } = useUsers(page);
+  const { data, isLoading, isFetching, error } = useUsers(page, {
+    initialData: users,
+  });
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -151,3 +154,12 @@ export default function UserList(): JSX.Element {
     </Box>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { users, totalCount } = await getUsers(1);
+  return {
+    props: {
+      users,
+    },
+  };
+};
