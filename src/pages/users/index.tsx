@@ -35,7 +35,7 @@ export default function UserList(): JSX.Element {
     md: true,
   });
 
-  async function handlePrefetchUser(userId) {
+  async function handlePrefetchUser(userId: string) {
     await queryClient.prefetchInfiniteQuery(
       ["user", userId],
       async () => {
